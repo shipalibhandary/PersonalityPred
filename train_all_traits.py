@@ -16,7 +16,6 @@ trait_expansion = {
     'J': 'Judging',
     'P': 'Perceiving'
 }
-
 mbti_feedback = {
     'INTJ': "Strategic and independent thinker.",
     'INTP': "Analytical and curious problem-solver.",
