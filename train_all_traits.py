@@ -38,11 +38,11 @@ mbti_feedback = {
 #  Load cleaned dataset 
 df = pd.read_csv(r'D:\PersonalityPred\mbti_cleaned.csv', encoding='latin1')
 
-# === TF-IDF Vectorization ===
+# TF-IDF Vectorization
 vectorizer = TfidfVectorizer(max_features=5000, stop_words='english')
 X_tfidf = vectorizer.fit_transform(df['clean_posts'])
 
-# === Train 4 models, one for each trait ===
+# Train 4 models, one for each trait
 models = {}
 traits = ['I_E', 'N_S', 'T_F', 'J_P']
 
@@ -56,10 +56,10 @@ for trait in traits:
     print(f"✅ {trait} model trained. Accuracy: {acc:.2f}")
     models[trait] = model
 
-# === User input ===
+# User input
 user_text = input("\n🧠 Enter a text about yourself or someone: ")
 
-# === Preprocess input ===
+# Preprocess input
 def clean_text(text):
     text = text.lower()
     text = re.sub(r'http\S+', '', text)
@@ -70,13 +70,13 @@ def clean_text(text):
 clean_input = clean_text(user_text)
 input_tfidf = vectorizer.transform([clean_input])
 
-# === Predict all four traits ===
+# Predict all four traits
 pred_I_E = models['I_E'].predict(input_tfidf)[0]
 pred_N_S = models['N_S'].predict(input_tfidf)[0]
 pred_T_F = models['T_F'].predict(input_tfidf)[0]
 pred_J_P = models['J_P'].predict(input_tfidf)[0]
 
-# === Convert numeric predictions to MBTI letters ===
+# Convert numeric predictions to MBTI letters
 I_E = 'I' if pred_I_E == 0 else 'E'
 N_S = 'N' if pred_N_S == 0 else 'S'
 T_F = 'T' if pred_T_F == 0 else 'F'
@@ -84,6 +84,6 @@ J_P = 'J' if pred_J_P == 0 else 'P'
 
 predicted_type = I_E + N_S + T_F + J_P
 
-# === Generate readable output ===
+# Generate readable output
 full_form = " - ".join([trait_expansion[c] for c in predicted_type])
 
