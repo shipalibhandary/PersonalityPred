@@ -37,3 +37,8 @@ Dataset Source:
 https://www.kaggle.com/datasnaek/mbti-type
 
 ## 🙌 Acknowledgments
+Kaggle community dataset
+
+Scikit-learn documentation
+
+NLTK resources
