@@ -25,10 +25,10 @@ The goal of this project is to analyze text input and classify personality chara
 | Evaluation | Accuracy Score, Confusion Matrix |
 
 ## 🔍 Example Prediction
-Input:
-
+Input: 
 "I enjoy planning things in advance and analyzing situations carefully."
 
 Output:
-"I enjoy planning things in advance and analyzing situations carefully."
+Predicted Personality Type: Analytical / Introvert-type
+
 
