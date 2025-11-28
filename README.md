@@ -22,27 +22,32 @@ The goal of this project is to analyze text input and classify personality chara
 
 
 ## 🔧 Technologies Used
-| Category | Tools / Libraries |
-|---------|-------------------|
-| Language | Python |
-| Data Handling | Pandas, NumPy |
-| NLP | NLTK / spaCy, Scikit-learn TF-IDF Vectorizer |
-| Model | Logistic Regression |
-| Evaluation | Accuracy Score, Confusion Matrix |
-
-## 🔍 Example Prediction
-Input: 
-   "I enjoy planning things in advance and analyzing situations carefully."
-
-Output:
-   Predicted Personality Type: Analytical / Introvert-type
+- Python
+- scikit-learn
+- pandas
+- numpy
+- matplotlib
+- regex (re)
 
 ## 📎 Dataset
+- Dataset Source: https://www.kaggle.com/datasnaek/mbti-type
+- Size: ~8600 rows
+- Columns:
+   - 4 trait labels
+   - Raw Posts
+   - Cleaned text
 
-Dataset Source:
-https://www.kaggle.com/datasnaek/mbti-type
+## 🧪 Model Used
+The system uses Logistic Regression, chosen because:
+- It works well for text classification
+- It is fast, interpretable, and effective on TF-IDF vectors
+- It avoids overfitting better than more complex models for small datasets
+- It is widely used for binary classification, matching MBTI’s binary trait system
 
-## 🙌 Acknowledgments
-- Kaggle community dataset
-- Scikit-learn documentation
+## 🔍 Example Prediction
+Input:<br>
+   "I enjoy planning things in advance and analyzing situations carefully."
 
+Output:<br>
+   Predicted MBTI Type: INTJ
+   Feedback: "Strategic and independent thinker."
