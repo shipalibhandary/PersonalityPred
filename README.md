@@ -26,4 +26,9 @@ The goal of this project is to analyze text input and classify personality chara
 
 ## 🔍 Example Prediction
 Input:
+
 "I enjoy planning things in advance and analyzing situations carefully."
+
+Output:
+"I enjoy planning things in advance and analyzing situations carefully."
+
