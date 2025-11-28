@@ -35,3 +35,5 @@ Predicted Personality Type: Analytical / Introvert-type
 
 Dataset Source:
 https://www.kaggle.com/datasnaek/mbti-type
+
+## 🙌 Acknowledgments
