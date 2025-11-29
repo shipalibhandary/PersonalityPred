@@ -44,14 +44,6 @@ The system uses Logistic Regression, chosen because:
 - It avoids overfitting better than more complex models for small datasets
 - It is widely used for binary classification, matching MBTI’s binary trait system
 
-## 🔍 Example Prediction
-Input:<br>
-   "I enjoy planning things in advance and analyzing situations carefully."
-
-Output:<br>
-   Predicted MBTI Type: INTJ
-   Feedback: "Strategic and independent thinker."
-
 ## 📸 Screenshot
 <img src="Screenshots/image.png" alt="image" height="700" width="800"/>
 
